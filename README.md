@@ -1,6 +1,8 @@
 # Dependent Calls:  Cap'n Proto vs. Ice
 
-Is is a test/benchmark designed to demonstrate how promise pipelining can
+_**Note:**  Only tested on Linux, though "should" work on others._
+
+This is a test/benchmark designed to demonstrate how promise pipelining can
 significantly reduce latency.
 
 The test defines, using each framework, a server that exports a simple
