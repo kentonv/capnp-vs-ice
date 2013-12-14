@@ -32,7 +32,19 @@ PID=${!}
 kill $PID
 wait $PID > /dev/null 2>&1 || true
 
+echo "*** Ice done."
+
+echo "*** Testing Thrift..."
+
+./thrift-server &
+PID=${!}
+
+./thrift-client
+
+kill $PID
+wait $PID > /dev/null 2>&1 || true
+
+echo "*** Thrift done."
+
 kill $FPID
 wait $FPID > /dev/null 2>&1 || true
-
-echo "*** Ice done."
